@@ -13,33 +13,43 @@ public class Tables
 		// File rock_jars = new File("C:\\Users\\Charlie\\Documents\\GitHub\\CSC-220\\Assignments\\Assignment1\\rock_jars.txt");
 		// Scanner scan = new Scanner(rock_jars);
 		// System.out.println(scan.nextLine());
-		System.out.println("--------------------------------\nLeading Digit  Count           %\n--------------------------------\n");
-		System.out.println("0\n1\n2\n3\n4\n5\n6\n7\n8\n9");
+		System.out.println("--------------------------------\nLeading Digit  Count           %\n--------------------------------");
+		System.out.printf("%-10s %-10s %-10s\n", "0", "t", "e");
+		System.out.printf("%-10s %-10s %-10s\n", "1", "t", "e");
+		System.out.printf("%-10s %-10s %-10s\n", "2", "t", "e");
+		System.out.printf("%-10s %-10s %-10s\n", "3", "t", "e");
+		System.out.printf("%-10s %-10s %-10s\n", "4", "t", "e");
+		System.out.printf("%-10s %-10s %-10s\n", "5", "t", "e");
+		System.out.printf("%-10s %-10s %-10s\n", "6", "t", "e");
+		System.out.printf("%-10s %-10s %-10s\n", "7", "t", "e");
+		System.out.printf("%-10s %-10s %-10s\n", "8", "t", "e");
+		System.out.printf("%-10s %-10s %-10s\n", "9", "t", "e");
 		System.out.println("--------------------------------\nTOTAL          25        100.00%\n--------------------------------\n--------------------------------");
 		//why arent the --- new lines as close as the output in the PDF??
-		FileReader file = new FileReader("rock_jars.txt");
-		BufferedReader reader = new BufferedReader(file);
+		// FileReader file = new FileReader("rock_jars.txt");
+		// BufferedReader reader = new BufferedReader(file);
 		
-		//how do i read input as ints??
-		String text = "";
-		// int first_digit;
-		String line = reader.readLine();
-		while (line != null)
-		{
-			text += line;
-			//text += System.out.println("T");
-			line = reader.readLine();
-		}
+		// //how do i read input as ints??
+		// String text = "";
+		// // int first_digit;
+		// String line = reader.readLine();
+		// while (line != null)
+		// {
+		// 	text += line;
+		// 	//text += System.out.println("T");
+		// 	line = reader.readLine();
+		// 	line = newline
+		// }
 
 		
-		//code to calculate the first digit of each newline 
+		// //code to calculate the first digit of each newline 
 		// first_digit = text;
 		// while(first_digit >= 10)
 		// {
 		// 	first_digit = first_digit / 10;
 		// }	
 		
-		System.out.println(text);
+		// System.out.println(text);
 	}
 }
 
