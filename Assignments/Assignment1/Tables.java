@@ -29,6 +29,7 @@ public class Tables
 			text += line;
 			//text += System.out.println("T");
 			line = reader.readLine();
+			//newline function
 		}
 
 		
