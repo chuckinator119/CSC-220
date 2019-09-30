@@ -1,7 +1,7 @@
 /* ***************************************************
- * <your name>
- * <the date>
- * <the file name>
+ * <Charlie McBride>
+ * <9-30-19>
+ * <List.java>
  *
  * <a simple, short program/class description>
  *************************************************** */
@@ -13,13 +13,13 @@ class List
 
 	private int end;	// the index of the last valid item in the list
 	private int curr;	// the index of the current item in the list
-	private char[] list;	// the list
+	private int[] list;	// the list
 
 	// constructor
 	// remember that an empty list has a "size" of -1 and its "position" is at -1
 	public List()
 	{
-		list = new char[MAX_SIZE];
+		list = new int[MAX_SIZE];
 		end = curr = -1;
 	}
 
@@ -27,7 +27,7 @@ class List
 	// clones the list l and sets the last element as the current
 	public List(List l)
 	{
-		list = new char[MAX_SIZE];
+		list = new int[MAX_SIZE];
 		end = curr = -1;
 		
 		// copy each element 
@@ -82,10 +82,10 @@ class List
 	}
 
 	// returns the value of the current element (or -1)
-	public char GetValue()
+	public int GetValue()
 	{
 		if(IsEmpty())
-			return (char)32;
+			return -1;
 		else
 			return list[curr];
 	}
@@ -100,7 +100,7 @@ class List
 	// inserts an item before the current element
 	// the new element becomes the current
 	// this should not be possible for a full list
-	public void InsertBefore(char data)
+	public void InsertBefore(int data)
 	{
 		if(!IsFull())
 		{
@@ -122,7 +122,7 @@ class List
 	// inserts an item after the current element
 	// the new element becomes the current
 	// this should not be possible for a full list
-	public void InsertAfter(char data)
+	public void InsertAfter(int data)
 	{
 		if(!IsFull())
 		{
@@ -162,7 +162,7 @@ class List
 
 	// replaces the value of the current element with the specified value
 	// this should not be possible for an empty list
-	public void Replace(char data)
+	public void Replace(int data)
 	{
 		if(!IsEmpty())
 			list[curr] = data;
