@@ -24,4 +24,24 @@ public class Vehicles {
 }
 
 
+class Boat extends Vehicles{
+    float turnrate;
+    int displacement;
+    String rigging;
+
+    public Boat(){
+        this.turnrate = turnrate;
+        this.displacement = displacement;
+        this.rigging = rigging;
+    }
+
+}
+
+class Airplane extends Vehicles{
+
+}
+
+class Car extends Vehicles{
+
+}
 
