@@ -1,14 +1,36 @@
+// class
 class Node
 {
+//main
+    public static void main(String[] args)
+    {
+        Node head;
+        Node curr;
+        head = new Node();
+        head.setData(17); 
+        curr = head;   
+        curr.setLink(new Node());
+        curr.getLink().setData(15);
+        curr.getLink().setLink(new Node());
+        curr.getLink().getLink().setData(32);
+        curr = curr.getLink().getLink();
+        head.Traverse();
+        // curr = head;
+        // while (curr!= null)
+        // {
+        //     System.out.print(curr.getData() + " ");
 
-    public static void main(String[] args) {
-        Node node = new Node();
-        node.setData(5);
-        System.out.println(node.data);
+        //     curr = curr.getLink();
+        // }
+        // System.out.println();
+
+        // System.out.print(curr.getData() + " ");
+        // head.Traverse();
     }
+//declare variables
     private int data;
     private Node link;
-
+//all the functions
     public Node()
     {
         this.data = 0;
@@ -36,4 +58,20 @@ class Node
         this.link = link;
 
     }
+
+    public void Traverse(data link)
+    {
+        curr = head;
+        while (curr != null)
+        {
+            System.out.print(curr.getData()+"  ");
+                                            //manipulate the nodes here
+                                            //with each node
+            curr = curr.getLink();
+
+        }
+        System.out.println();
+
+    }
 }
+
