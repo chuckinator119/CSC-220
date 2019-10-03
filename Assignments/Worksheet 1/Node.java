@@ -9,23 +9,37 @@ class Node
         head = new Node();
         head.setData(17); 
         curr = head;   
+
+        curr.setLink(new Node());
+        curr = curr.getLink();
+        curr.setData(10);
+        
         curr.setLink(new Node());
         curr.getLink().setData(15);
+
         curr.getLink().setLink(new Node());
         curr.getLink().getLink().setData(32);
         curr = curr.getLink().getLink();
-        head.Traverse();
-        // curr = head;
-        // while (curr!= null)
-        // {
-        //     System.out.print(curr.getData() + " ");
 
-        //     curr = curr.getLink();
-        // }
-        // System.out.println();
+        Node newNode = new Node();
+        newNode.setData(72);
+        newNode.setLink(curr.getLink());
+        curr.setLink(newNode);
 
-        // System.out.print(curr.getData() + " ");
-        // head.Traverse();
+
+
+
+
+
+
+        curr = head;
+        while (curr!= null)
+        {
+            System.out.print(curr.getData() + " ");
+
+            curr = curr.getLink();
+        }
+        System.out.println();
     }
 //declare variables
     private int data;
@@ -59,19 +73,19 @@ class Node
 
     }
 
-    public void Traverse(data link)
-    {
-        curr = head;
-        while (curr != null)
-        {
-            System.out.print(curr.getData()+"  ");
-                                            //manipulate the nodes here
-                                            //with each node
-            curr = curr.getLink();
+    // public void Traverse(data link)
+    // {
+    //     curr = head;
+    //     while (curr != null)
+    //     {
+    //         System.out.print(curr.getData()+"  ");
+    //                                         //manipulate the nodes here
+    //                                         //with each node
+    //         curr = curr.getLink();
 
-        }
-        System.out.println();
+    //     }
+    //     System.out.println();
 
-    }
+    
 }
 
