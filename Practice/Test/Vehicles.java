@@ -45,5 +45,8 @@ class Car extends Vehicles{
 
 }
 
+<<<<<<< HEAD
 // COOOOOOOOOOMMMMMMMMMMMMMTEEENNNNNNTINGGGGGGGGGGGGGG
 // TESTING MORE FEAUTIRES
+=======
+>>>>>>> parent of befd188... TESTING
