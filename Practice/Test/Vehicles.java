@@ -45,3 +45,8 @@ class Car extends Vehicles{
 
 }
 
+<<<<<<< HEAD
+=======
+// COOOOOOOOOOMMMMMMMMMMMMMTEEENNNNNNTINGGGGGGGGGGGGGG
+// TESTING MORE FEAUTIRES
+>>>>>>> parent of 2ad3b03... the thing is done
