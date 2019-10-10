@@ -1,9 +1,9 @@
 /* ***************************************************
- * <your name>
- * <the date>
- * <the file name>
+ *Charlie McBride
+ * <10-9-19>
+ * <list.java>
  *
- * <a simple, short program/class description>
+ * <Program that uses Nodes and linked list to implement the list structure from the last homework>
  *************************************************** */
 
 // the Node class
