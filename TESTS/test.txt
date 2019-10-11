@@ -1,0 +1,14 @@
+test review
+
+- arrays
+= linked lists
+stacks and queues
+
+COMPLEXITY
+    -big oh
+    -t(n)
+POST FIX expressions using stacks
+    post fix to infix infix to postfix
+
+    int[]x i
+    int[][]y:
