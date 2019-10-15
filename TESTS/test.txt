@@ -1,14 +1,22 @@
 test review
 
-- arrays
-= linked lists
-stacks and queues
-
-COMPLEXITY
-    -big oh
-    -t(n)
-POST FIX expressions using stacks
-    post fix to infix infix to postfix
-
+- arrays (35 points)
+    2d arrays
     int[]x i
     int[][]y:
+
+linked lists(50 points)
+
+stacks and queues (30  points)
+    POST FIX expressions using stacks
+    post fix to infix infix to postfix
+    evaluating postfix expressions
+
+searching and sorting (35 points)
+    given a set of numbers use bubble sort and show *
+
+recursion(15 points)
+
+COMPLEXITY (20pnts)
+    -big oh
+    -t(n)
