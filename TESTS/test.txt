@@ -19,7 +19,7 @@ searching and sorting (35 points)
     Bubble Sort
     Quicksort
     Heapsort
-
+s
 recursion(15 points)
 
 COMPLEXITY (20pnts)
