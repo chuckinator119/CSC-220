@@ -5,23 +5,26 @@ test review
     int[]x i
     int[][]y:
 
-linked lists(50 points)
+linked lists(50 points) NO
 
-stacks and queues (30  points)
+stacks and queues (30  points) CHECK
     POST FIX expressions using stacks
     post fix to infix infix to postfix
     evaluating postfix expressions
+    STACK - filo
+    queue - fifo
 
-searching and sorting (35 points)
+searching and sorting (35 points) KINDA
     given a set of numbers use bubble sort and show *
     Merge Sort
-    Insertion Sort
-    Bubble Sort
+    Insertion Sort  CHECK
+    Bubble Sort CHECK
     Quicksort
     Heapsort
-s
-recursion(15 points)
 
-COMPLEXITY (20pnts)
+recursion(15 points) KINDA
+    -ask christian about recursion answers
+
+COMPLEXITY (20pnts) KINDA
     -big oh
     -t(n)
