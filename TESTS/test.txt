@@ -1,6 +1,6 @@
 test review
 
-- arrays (35 points)
+- arrays (35 points) CHECK
     2d arrays
     int[]x i
     int[][]y:
@@ -14,6 +14,11 @@ stacks and queues (30  points)
 
 searching and sorting (35 points)
     given a set of numbers use bubble sort and show *
+    Merge Sort
+    Insertion Sort
+    Bubble Sort
+    Quicksort
+    Heapsort
 
 recursion(15 points)
 
