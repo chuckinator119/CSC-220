@@ -16,11 +16,11 @@ stacks and queues (30  points) CHECK
 
 searching and sorting (35 points) KINDA
     given a set of numbers use bubble sort and show *
-    Merge Sort
     Insertion Sort  CHECK
     Bubble Sort CHECK
     Quicksort
-    Heapsort
+    optimized bubble
+    selection sort
 
 recursion(15 points) KINDA
     -ask christian about recursion answers
