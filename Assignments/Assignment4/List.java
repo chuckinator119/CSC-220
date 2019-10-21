@@ -1,12 +1,3 @@
-/* ***************************************************
- *Charlie McBride
- * <10-9-19>
- * <list.java>
- *
- * <Program that uses Nodes and linked list to implement the list structure from the last homework>
- *************************************************** */
-
-// the Node class
 class Node {
 	private int data;
 	private Node link;
@@ -43,16 +34,27 @@ public class List {
 	private Node head;
 	private Node tail;
 	private Node curr;
+	private Node temp;
 	private int num_items;
 
 	// constructor
 	// remember that an empty list has a "size" of -1 and its "position" is at -1
 	public List() {
+		head = null;
+		tail = null;
+		curr = null;
+		num_items = 0;
 	}
 
 	// copy constructor
 	// clones the list l and sets the last element as the current
 	public List(List l) {
+		Node n = l.head;
+		head = tail = curr = null;
+		while (n != null) {
+			InsertAfter(n.getData());
+			n = n.getLink();
+		}
 	}
 
 	// navigates to the beginning of the list
@@ -70,13 +72,12 @@ public class List {
 	// this should not be possible for an empty list
 	// this should not be possible for invalid positions
 	public void SetPos(int pos) {
+		if (!IsEmpty() && pos > 0 && pos < num_items) {
+			curr = head;
 
-		if (!IsEmpty() && pos > 0 && pos < num_items)
-			curr = head; // ?First()
-
-		for (int i = 0; i < pos; i++)
-			curr = curr.getLink();
-
+			for (int i = 0; i < pos; i++)
+				curr = curr.getLink();
+		}
 	}
 
 	// navigates to the previous element
@@ -85,6 +86,7 @@ public class List {
 	public void Prev() {
 		if (!IsEmpty() && curr != head) {
 			Node n = head;
+
 			while (n.getLink() != curr)
 				n = n.getLink();
 
@@ -107,10 +109,12 @@ public class List {
 
 		Node n = head;
 		int i = 0;
+
 		while (n != curr) {
 			n = n.getLink();
 			i++;
 		}
+
 		return i;
 	}
 
@@ -134,17 +138,14 @@ public class List {
 	public void InsertBefore(int data) {
 		if (!IsFull()) {
 			if (IsEmpty())
-
 				InsertAfter(data);
 			else {
 				if (curr == head) {
 					head = new Node();
-
 					head.setData(data);
 					head.setLink(curr);
 					curr = head;
 					num_items++;
-
 				} else {
 					Prev();
 					InsertAfter(data);
@@ -160,6 +161,7 @@ public class List {
 		if (!IsFull()) {
 			Node n = new Node();
 			n.setData(data);
+
 			if (IsEmpty())
 				head = tail = curr = n;
 			else {
@@ -173,7 +175,6 @@ public class List {
 				}
 			}
 			num_items++;
-
 		}
 	}
 
@@ -181,11 +182,12 @@ public class List {
 	// this should not be possible for an empty list
 	public void Remove() {
 		if (!IsEmpty()) {
-			if (curr == head)
+			if (curr == head) {
 				head = curr = curr.getLink();
-			else {
+			} else {
 				Prev();
 				curr.setLink(curr.getLink().getLink());
+
 				if (curr.getLink() == null)
 					tail = curr;
 				Next();
@@ -197,25 +199,25 @@ public class List {
 	// replaces the value of the current element with the specified value
 	// this should not be possible for an empty list
 	public void Replace(int data) {
-		if (!IsEmpty()) {
+		if (!IsEmpty())
 			curr.setData(data);
-		}
 	}
 
 	// returns if the list is empty
 	public boolean IsEmpty() {
-		return (head == null);
+		return num_items == 0;
 	}
 
 	// returns if the list is full
 	public boolean IsFull() {
-		return (num_items == MAX_SIZE);
+		return num_items == MAX_SIZE;
 	}
 
 	// returns if two lists are equal (by value)
 	public boolean Equals(List l) {
 		if (num_items != l.num_items)
 			return false;
+
 		Node p = head;
 		Node q = l.head;
 
@@ -226,7 +228,6 @@ public class List {
 			q = q.getLink();
 		}
 		return true;
-
 	}
 
 	// returns the concatenation of two lists
@@ -235,7 +236,7 @@ public class List {
 	// the returned list should not exceed MAX_SIZE elements
 	// the last element of the new list is the current
 	public List Add(List l) {
-		List t = new List();
+		List t = new List(this);
 		Node n = l.head;
 
 		while (n != null && !t.IsFull()) {
@@ -253,13 +254,12 @@ public class List {
 		else {
 			String s = "";
 			Node n = head;
+
 			while (n != null) {
 				s += n.getData() + " ";
 				n = n.getLink();
-
 			}
 			return s;
-
 		}
 	}
 }

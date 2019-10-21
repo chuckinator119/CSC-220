@@ -8,22 +8,22 @@
 
 // the Node class
 class Node {
-    private Type data;
+    private int data;
     private Node link;
 
     // constructor
     public Node() {
-        this.data = null;
+        this.data = 0;
         this.link = null;
     }
 
     // accessor and mutator for the data component
-    public void getData() {
+    public int getData() {
         return this.data;
     }
 
-    public void setData(int data) {
-        this.data = data;
+    public int setData(int data) {
+        return this.data;
     }
 
     // accessor and mutator for the link component
@@ -128,9 +128,9 @@ public class List {
     }
 
     // returns the value of the current element (or -1)
-    public void GetValue() {
+    public int GetValue() {
         if (IsEmpty())
-            return null;
+            return -1;
         else
             return curr.getData();
     }
