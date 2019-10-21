@@ -1,19 +1,19 @@
-class Node {
-	private int data;
-	private Node link;
+class Node<T> {
+	private T data;
+	private Node<T> link;
 
 	// constructor
 	public Node() {
-		this.data = 0;
+		this.data = null;
 		this.link = null;
 	}
 
 	// accessor and mutator for the data component
-	public int getData() {
+	public T getData() {
 		return this.data;
 	}
 
-	public void setData(int data) {
+	public void setData(T data) {
 		this.data = data;
 	}
 
@@ -22,19 +22,19 @@ class Node {
 		return this.link;
 	}
 
-	public void setLink(Node link) {
+	public void setLink(Node<T> link) {
 		this.link = link;
 	}
 }
 
 // the List class
-public class List {
+public class List<T> {
 	public static final int MAX_SIZE = 50;
 
-	private Node head;
-	private Node tail;
-	private Node curr;
-	private Node temp;
+	private Node<T> head;
+	private Node<T> tail;
+	private Node<T> curr;
+	private Node<T> temp;
 	private int num_items;
 
 	// constructor
@@ -48,8 +48,8 @@ public class List {
 
 	// copy constructor
 	// clones the list l and sets the last element as the current
-	public List(List l) {
-		Node n = l.head;
+	public List(List<T> l) {
+		Node<T> n = l.head;
 		head = tail = curr = null;
 		while (n != null) {
 			InsertAfter(n.getData());
@@ -85,7 +85,7 @@ public class List {
 	// there should be no wrap-around
 	public void Prev() {
 		if (!IsEmpty() && curr != head) {
-			Node n = head;
+			Node<T> n = head;
 
 			while (n.getLink() != curr)
 				n = n.getLink();
@@ -107,7 +107,7 @@ public class List {
 		if (IsEmpty())
 			return -1;
 
-		Node n = head;
+		Node<T> n = head;
 		int i = 0;
 
 		while (n != curr) {
@@ -119,7 +119,9 @@ public class List {
 	}
 
 	// returns the value of the current element (or -1)
-	public int GetValue() {
+	publi T
+
+	GetValue() {
 		if (IsEmpty())
 			return -1;
 		else
@@ -159,7 +161,7 @@ public class List {
 	// this should not be possible for a full list
 	public void InsertAfter(int data) {
 		if (!IsFull()) {
-			Node n = new Node();
+			Node<T> n = new Node();
 			n.setData(data);
 
 			if (IsEmpty())
@@ -218,8 +220,8 @@ public class List {
 		if (num_items != l.num_items)
 			return false;
 
-		Node p = head;
-		Node q = l.head;
+		Node<T> p = head;
+		Node<T> q = l.head;
 
 		while (p != null) {
 			if (p.getData() != q.getData())
@@ -235,9 +237,9 @@ public class List {
 	// l should be concatenated to the end of *this
 	// the returned list should not exceed MAX_SIZE elements
 	// the last element of the new list is the current
-	public List Add(List l) {
-		List t = new List(this);
-		Node n = l.head;
+	public List<T> Add(List<T> l) {
+		List<T> t = new List(this);
+		Node<T> n = l.head;
 
 		while (n != null && !t.IsFull()) {
 			t.InsertAfter(n.getData());
@@ -252,8 +254,8 @@ public class List {
 		if (head == null)
 			return "NULL";
 		else {
-			String s = "";
-			Node n = head;
+			Node<T> s = "";
+			Node<T> n = head;
 
 			while (n != null) {
 				s += n.getData() + " ";
