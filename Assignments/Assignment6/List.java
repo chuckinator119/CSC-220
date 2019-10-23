@@ -1,8 +1,7 @@
-
-// the Node class
-class Node<mT> {
-	private mT data;
-	private Node<mT> link;
+// / the Node class
+class Node<sT> {
+	private sT data;
+	private Node<sT> link;
 
 	// constructor
 	public Node() {
@@ -11,31 +10,31 @@ class Node<mT> {
 	}
 
 	// accessor and mutator for the data component
-	public mT getData() {
+	public sT getData() {
 		return this.data;
 	}
 
-	public void setData(mT data) {
+	public void setData(sT data) {
 		this.data = data;
 	}
 
 	// accessor and mutator for the link component
-	public Node<mT> getLink() {
+	public Node<sT> getLink() {
 		return this.link;
 	}
 
-	public void setLink(Node<mT> link) {
+	public void setLink(Node<sT> link) {
 		this.link = link;
 	}
 }
 
 // the List class
-public class List<mT> {
+public class List<sT> {
 	public static final int MAX_SIZE = 50;
 
-	private Node<mT> head;
-	private Node<mT> tail;
-	private Node<mT> curr;
+	private Node<sT> head;
+	private Node<sT> tail;
+	private Node<sT> curr;
 	private int num_items;
 
 	// constructor
@@ -47,8 +46,8 @@ public class List<mT> {
 
 	// copy constructor
 	// clones the list l and sets the last element as the current
-	public List(List<mT> l) {
-		Node<mT> n = l.head;
+	public List(List<sT> l) {
+		Node<sT> n = l.head;
 
 		this.head = this.tail = this.curr = null;
 		this.num_items = 0;
@@ -88,7 +87,7 @@ public class List<mT> {
 	// there should be no wrap-around
 	public void Prev() {
 		if (!this.IsEmpty() && this.curr != this.head) {
-			Node<mT> n = this.head;
+			Node<sT> n = this.head;
 
 			// move n to the previous element
 			while (n.getLink() != this.curr)
@@ -111,7 +110,7 @@ public class List<mT> {
 		if (this.IsEmpty())
 			return -1;
 
-		Node<mT> n = this.head;
+		Node<sT> n = this.head;
 		int i = 0;
 
 		// traverse the list to get the current position
@@ -124,7 +123,7 @@ public class List<mT> {
 	}
 
 	// returns the value of the current element (or -1)
-	public mT GetValue() {
+	public sT GetValue() {
 		if (this.IsEmpty())
 			return null;
 		else
@@ -140,7 +139,7 @@ public class List<mT> {
 	// inserts an item before the current element
 	// the new element becomes the current
 	// this should not be possible for a full list
-	public void InsertBefore(mT data) {
+	public void InsertBefore(sT data) {
 		if (!this.IsFull()) {
 			// if the list is empty, just insert after
 			if (this.IsEmpty())
@@ -149,7 +148,7 @@ public class List<mT> {
 				// if we're at the beginning, just create a new head that points to the current
 				// one
 				if (this.curr == this.head) {
-					this.head = new Node<mT>();
+					this.head = new Node<sT>();
 					this.head.setData(data);
 					this.head.setLink(curr);
 					this.curr = this.head;
@@ -167,9 +166,9 @@ public class List<mT> {
 	// inserts an item after the current element
 	// the new element becomes the current
 	// this should not be possible for a full list
-	public void InsertAfter(mT data) {
+	public void InsertAfter(sT data) {
 		if (!this.IsFull()) {
-			Node<mT> n = new Node<mT>();
+			Node<sT> n = new Node<sT>();
 
 			n.setData(data);
 
@@ -222,7 +221,7 @@ public class List<mT> {
 
 	// replaces the value of the current element with the specified value
 	// this should not be possible for an empty list
-	public void Replace(mT data) {
+	public void Replace(sT data) {
 		if (!this.IsEmpty())
 			this.curr.setData(data);
 	}
@@ -238,13 +237,13 @@ public class List<mT> {
 	}
 
 	// returns if two lists are equal (by value)
-	public boolean Equals(List<mT> l) {
+	public boolean Equals(List<sT> l) {
 		// the lists are not equal if they're of different sizes
 		if (this.num_items != l.num_items)
 			return false;
 
-		Node<mT> p = this.head;
-		Node<mT> q = l.head;
+		Node<sT> p = this.head;
+		Node<sT> q = l.head;
 
 		// iterate through each list
 		while (p != null) {
@@ -263,10 +262,10 @@ public class List<mT> {
 	// l should be concatenated to the end of *this
 	// the returned list should not exceed MAX_SIZE elements
 	// the last element of the new list is the current
-	public List<mT> Add(List<mT> l) {
+	public List<sT> Add(List<sT> l) {
 		// copy the first list
-		List<mT> t = new List<mT>(this);
-		Node<mT> n = l.head;
+		List<sT> t = new List<sT>(this);
+		Node<sT> n = l.head;
 
 		// iterate through the second list and copy each element to the new list
 		while (n != null && !t.IsFull()) {
@@ -284,7 +283,7 @@ public class List<mT> {
 		if (this.head == null)
 			return "NULL";
 		else {
-			Node<mT> n = this.head;
+			Node<sT> n = this.head;
 			String s = "";
 
 			// otherwise iterate through the list and display each element separated by a
