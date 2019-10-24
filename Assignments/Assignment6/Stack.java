@@ -17,9 +17,9 @@ public class Stack<sT> {
 
     }
 
-    public sT Pop() {
-
-        return l.Remove(data);
+    public sT Pop(sT data) {
+        l.Remove(sT data);
+        return s.l;
     }
 
     public sT Peek() {
