@@ -49,51 +49,51 @@ public class StackTest {
 		System.out.println("s1.Peek()=" + s1.Peek());
 		System.out.println();
 
-		// Stack<Integer> s2 = new Stack<Integer>(s1); // s2 declared as a copy of s1
-		// System.out.println("*declare s2 as a copy of s1 (stack s2(s1))\ns2=" + s2);
-		// System.out.println("s2.Size()=" + s2.Size());
-		// System.out.println("s2.IsEmpty()=" + ((s2.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s2.IsFull()=" + ((s2.IsFull()) ? "T" : "F"));
-		// System.out.println("s2.Peek()=" + s2.Peek());
-		// System.out.println();
+		Stack<Integer> s2 = new Stack<Integer>(s1); // s2 declared as a copy of s1
+		System.out.println("*declare s2 as a copy of s1 (stack s2(s1))\ns2=" + s2);
+		System.out.println("s2.Size()=" + s2.Size());
+		System.out.println("s2.IsEmpty()=" + ((s2.IsEmpty()) ? "T" : "F"));
+		System.out.println("s2.IsFull()=" + ((s2.IsFull()) ? "T" : "F"));
+		System.out.println("s2.Peek()=" + s2.Peek());
+		System.out.println();
 
-		// Stack<Integer> s3 = new Stack<Integer>();
-		// s3 = s3.Add(s2);
-		// System.out.println("*declare s3 as a copy of s2 (stack s3 = s2)\ns3=" + s3);
-		// // copy constructor (=)
-		// System.out.println("s3.Size()=" + s3.Size());
-		// System.out.println("s3.IsEmpty()=" + ((s3.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s3.IsFull()=" + ((s3.IsFull()) ? "T" : "F"));
-		// System.out.println("s3.Peek()=" + s3.Peek());
-		// System.out.println();
+		Stack<Integer> s3 = new Stack<Integer>();
+		s3 = s3.Add(s2);
+		System.out.println("*declare s3 as a copy of s2 (stack s3 = s2)\ns3=" + s3);
+		// copy constructor (=)
+		System.out.println("s3.Size()=" + s3.Size());
+		System.out.println("s3.IsEmpty()=" + ((s3.IsEmpty()) ? "T" : "F"));
+		System.out.println("s3.IsFull()=" + ((s3.IsFull()) ? "T" : "F"));
+		System.out.println("s3.Peek()=" + s3.Peek());
+		System.out.println();
 
-		// s2 = new Stack<Integer>();
-		// System.out.println("*reset s2 to 0\ns2=" + s2); // reset stack to 0
-		// System.out.println("s2.Size()=" + s2.Size());
-		// System.out.println("s2.IsEmpty()=" + ((s2.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s2.IsFull()=" + ((s2.IsFull()) ? "T" : "F"));
-		// System.out.println("s2.Peek()=" + s2.Peek());
-		// System.out.println();
+		s2 = new Stack<Integer>();
+		System.out.println("*reset s2 to 0\ns2=" + s2); // reset stack to 0
+		System.out.println("s2.Size()=" + s2.Size());
+		System.out.println("s2.IsEmpty()=" + ((s2.IsEmpty()) ? "T" : "F"));
+		System.out.println("s2.IsFull()=" + ((s2.IsFull()) ? "T" : "F"));
+		System.out.println("s2.Peek()=" + s2.Peek());
+		System.out.println();
 
-		// System.out.println("s1=" + s1 + "\ns2=" + s2 + "\ns3=" + s3);
-		// System.out.println("s1 == s2; =" + ((s1.Equals(s2)) ? "T" : "F")); // test ==
-		// System.out.println("s1 == s3; =" + ((s1.Equals(s3)) ? "T" : "F"));
-		// System.out.println("s1 != s3; =" + ((!s1.Equals(s3)) ? "T" : "F"));
-		// System.out.println();
+		System.out.println("s1=" + s1 + "\ns2=" + s2 + "\ns3=" + s3);
+		System.out.println("s1 == s2; =" + ((s1.Equals(s2)) ? "T" : "F")); // test ==
+		System.out.println("s1 == s3; =" + ((s1.Equals(s3)) ? "T" : "F"));
+		System.out.println("s1 != s3; =" + ((!s1.Equals(s3)) ? "T" : "F"));
+		System.out.println();
 
-		// s1 = s1.Add(s2);
-		// System.out.println("*s1 = s1 + s2\ns1=" + s1); // test +
-		// System.out.println("s1.Size()=" + s1.Size());
-		// System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
-		// System.out.println("s1.Peek()=" + s1.Peek());
-		// System.out.println();
+		s1 = s1.Add(s2);
+		System.out.println("*s1 = s1 + s2\ns1=" + s1); // test +
+		System.out.println("s1.Size()=" + s1.Size());
+		System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
+		System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
+		System.out.println("s1.Peek()=" + s1.Peek());
+		System.out.println();
 
-		// for (int i = 0; i < 5; i++)
-		// s1.Pop();
-		// System.out.println("*pop s1 5 times");
-		// System.out.println("s1=" + s1 + "\ns2=" + s2 + "\ns3=" + s3);
-		// System.out.println();
+		for (int i = 0; i < 5; i++)
+			s1.Pop();
+		System.out.println("*pop s1 5 times");
+		System.out.println("s1=" + s1 + "\ns2=" + s2 + "\ns3=" + s3);
+		System.out.println();
 
 		// s1 = s1.Add(s3);
 		// System.out.println("*s1 = s1 + s3\ns1=" + s1);

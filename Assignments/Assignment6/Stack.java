@@ -38,12 +38,12 @@ public class Stack<sT> {
         return l.IsFull();
     }
 
-    public boolean Equals(sT data) {
-        l.Equals(Stack < sT > l.s);
-        return true;
+    public boolean Equals(List<sT> l) {
+        return l.Equals(l);
+
     }
 
-    // Add()
+    // public boolean Add()
     // {
 
     // }
