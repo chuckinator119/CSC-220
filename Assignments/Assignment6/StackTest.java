@@ -13,41 +13,41 @@ public class StackTest {
 		System.out.println("s1.Peek()=" + s1.Peek());
 		System.out.println();
 
-		// for (int i = 0; i < 1000; i++) // push 1000 times with i+100
-		// s1.Push(i + 100);
-		// System.out.println("*Push(i+100) 1000 times\ns1=" + s1);
-		// System.out.println("s1.Size()=" + s1.Size());
-		// System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
-		// System.out.println("s1.Peek()=" + s1.Peek());
-		// System.out.println();
+		for (int i = 0; i < 1000; i++) // push 1000 times with i+100
+			s1.Push(i + 100);
+		System.out.println("*Push(i+100) 1000 times\ns1=" + s1);
+		System.out.println("s1.Size()=" + s1.Size());
+		System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
+		System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
+		System.out.println("s1.Peek()=" + s1.Peek());
+		System.out.println();
 
-		// for (int i = 0; i < 10; i++) // pop 10 times
-		// s1.Pop();
-		// System.out.println("*pop 10 times\ns1=" + s1);
-		// System.out.println("s1.Size()=" + s1.Size());
-		// System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
-		// System.out.println("s1.Peek()=" + s1.Peek());
-		// System.out.println();
+		for (int i = 0; i < 10; i++) // pop 10 times
+			s1.Pop();
+		System.out.println("*pop 10 times\ns1=" + s1);
+		System.out.println("s1.Size()=" + s1.Size());
+		System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
+		System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
+		System.out.println("s1.Peek()=" + s1.Peek());
+		System.out.println();
 
-		// for (int i = 0; i < 1000; i++) // pop 1000 times
-		// s1.Pop();
-		// System.out.println("*pop 1000 times\ns1=" + s1);
-		// System.out.println("s1.Size()=" + s1.Size());
-		// System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
-		// System.out.println("s1.Peek()=" + s1.Peek());
-		// System.out.println();
+		for (int i = 0; i < 1000; i++) // pop 1000 times
+			s1.Pop();
+		System.out.println("*pop 1000 times\ns1=" + s1);
+		System.out.println("s1.Size()=" + s1.Size());
+		System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
+		System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
+		System.out.println("s1.Peek()=" + s1.Peek());
+		System.out.println();
 
-		// for (int i = 0; i < 10; i++) // push 10 times with i*i
-		// s1.Push(i * i);
-		// System.out.println("*push 10 times with i*i\ns1=" + s1);
-		// System.out.println("s1.Size()=" + s1.Size());
-		// System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
-		// System.out.println("s1.Peek()=" + s1.Peek());
-		// System.out.println();
+		for (int i = 0; i < 10; i++) // push 10 times with i*i
+			s1.Push(i * i);
+		System.out.println("*push 10 times with i*i\ns1=" + s1);
+		System.out.println("s1.Size()=" + s1.Size());
+		System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
+		System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
+		System.out.println("s1.Peek()=" + s1.Peek());
+		System.out.println();
 
 		// Stack<Integer> s2 = new Stack<Integer>(s1); // s2 declared as a copy of s1
 		// System.out.println("*declare s2 as a copy of s1 (stack s2(s1))\ns2=" + s2);

@@ -11,15 +11,16 @@ public class Stack<sT> {
         l.First();
     }
 
-    // Push()
-    // {
+    public sT Push(sT data) {
+        l.InsertBefore(data);
+        return data;
 
-    // }
+    }
 
-    // Pop()
-    // {
+    public sT Pop() {
 
-    // }
+        return l.Remove(data);
+    }
 
     public sT Peek() {
         return l.GetValue();
