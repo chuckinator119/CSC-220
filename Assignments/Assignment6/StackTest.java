@@ -95,49 +95,49 @@ public class StackTest {
 		System.out.println("s1=" + s1 + "\ns2=" + s2 + "\ns3=" + s3);
 		System.out.println();
 
-		// s1 = s1.Add(s3);
-		// System.out.println("*s1 = s1 + s3\ns1=" + s1);
-		// System.out.println("s1.Size()=" + s1.Size());
-		// System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
-		// System.out.println("s1.Peek()=" + s1.Peek());
-		// System.out.println();
+		s1 = s1.Add(s3);
+		System.out.println("*s1 = s1 + s3\ns1=" + s1);
+		System.out.println("s1.Size()=" + s1.Size());
+		System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
+		System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
+		System.out.println("s1.Peek()=" + s1.Peek());
+		System.out.println();
 
-		// s1 = new Stack<Integer>();
-		// s1 = s1.Add(s3);
-		// System.out.println("*set s1 to 0 then s1 = s1 + s3\ns1=" + s1);
-		// System.out.println();
-		// s1 = s1.Add(s3);
-		// System.out.println("s1 += s3;\ns1=" + s1); // test +=
-		// System.out.println("s1.Size()=" + s1.Size());
-		// System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
-		// System.out.println("s1.Peek()=" + s1.Peek());
-		// System.out.println();
+		s1 = new Stack<Integer>();
+		s1 = s1.Add(s3);
+		System.out.println("*set s1 to 0 then s1 = s1 + s3\ns1=" + s1);
+		System.out.println();
+		s1 = s1.Add(s3);
+		System.out.println("s1 += s3;\ns1=" + s1); // test +=
+		System.out.println("s1.Size()=" + s1.Size());
+		System.out.println("s1.IsEmpty()=" + ((s1.IsEmpty()) ? "T" : "F"));
+		System.out.println("s1.IsFull()=" + ((s1.IsFull()) ? "T" : "F"));
+		System.out.println("s1.Peek()=" + s1.Peek());
+		System.out.println();
 
-		// System.out.println("s1=" + s1 + "\ns2=" + s2 + "\ns3=" + s3);
-		// System.out.println("s3.Peek()=" + s3.Peek());
-		// System.out.println();
-		// for (int i = 8; i > 0; i--)
-		// s3.Push(i);
-		// System.out.println("*push s3 8 times with i (backwards)\ns3=" + s3);
-		// System.out.println("s3.Peek()=" + s3.Peek());
-		// System.out.println();
-		// s3 = s3.Add(s1);
-		// System.out.println("*s3 += s1\ns3=" + s3);
-		// System.out.println("s3.Size()=" + s3.Size());
-		// System.out.println("s3.IsEmpty()=" + ((s3.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s3.IsFull()=" + ((s3.IsFull()) ? "T" : "F"));
-		// System.out.println("s3.Peek()=" + s3.Peek());
-		// System.out.println();
+		System.out.println("s1=" + s1 + "\ns2=" + s2 + "\ns3=" + s3);
+		System.out.println("s3.Peek()=" + s3.Peek());
+		System.out.println();
+		for (int i = 8; i > 0; i--)
+			s3.Push(i);
+		System.out.println("*push s3 8 times with i (backwards)\ns3=" + s3);
+		System.out.println("s3.Peek()=" + s3.Peek());
+		System.out.println();
+		s3 = s3.Add(s1);
+		System.out.println("*s3 += s1\ns3=" + s3);
+		System.out.println("s3.Size()=" + s3.Size());
+		System.out.println("s3.IsEmpty()=" + ((s3.IsEmpty()) ? "T" : "F"));
+		System.out.println("s3.IsFull()=" + ((s3.IsFull()) ? "T" : "F"));
+		System.out.println("s3.Peek()=" + s3.Peek());
+		System.out.println();
 
-		// Stack<Character> s4 = new Stack<Character>();
-		// for (char c = 'a'; c <= 'z'; c++)
-		// s4.Push(c);
-		// System.out.println("s4=" + s4);
-		// System.out.println("s4.Size()=" + s4.Size());
-		// System.out.println("s4.IsEmpty()=" + ((s4.IsEmpty()) ? "T" : "F"));
-		// System.out.println("s4.IsFull()=" + ((s4.IsFull()) ? "T" : "F"));
-		// System.out.println("s4.Peek()=" + s4.Peek());
+		Stack<Character> s4 = new Stack<Character>();
+		for (char c = 'a'; c <= 'z'; c++)
+			s4.Push(c);
+		System.out.println("s4=" + s4);
+		System.out.println("s4.Size()=" + s4.Size());
+		System.out.println("s4.IsEmpty()=" + ((s4.IsEmpty()) ? "T" : "F"));
+		System.out.println("s4.IsFull()=" + ((s4.IsFull()) ? "T" : "F"));
+		System.out.println("s4.Peek()=" + s4.Peek());
 	}
 }

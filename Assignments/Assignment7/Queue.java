@@ -1,28 +1,31 @@
-public class Stack<sT> {
+public class Queue<sT> {
     private List<sT> l;
 
     // constructors
-    public Stack() {
+    public Queue() {
         l = new List<sT>();
     }
 
-    public Stack(Stack<sT> s) {
+    public Queue(Queue<sT> s) {
         l = new List<sT>(s.l);
         l.First();
     }
 
-    public sT Push(sT data) {
-        l.InsertBefore(data);
+    public sT Enqueue(sT data) {
+        l.Last();
+        l.InsertAfter(data);
         return data;
 
     }
 
-    public sT Pop() {
+    public sT Dequeue() {
+        l.First();
         l.Remove();
         return null;
     }
 
     public sT Peek() {
+        l.First();
         return l.GetValue();
     }
 
@@ -38,7 +41,7 @@ public class Stack<sT> {
         return l.IsFull();
     }
 
-    public boolean Equals(Stack<sT> s) {
+    public boolean Equals(Queue<sT> s) {
         if (l.Equals(s.l)) {
             return true;
         } else {
@@ -46,8 +49,8 @@ public class Stack<sT> {
         }
     }
 
-    public Stack<sT> Add(Stack<sT> s) {
-        Stack<sT> t = new Stack<sT>(this);
+    public Queue<sT> Add(Queue<sT> s) {
+        Queue<sT> t = new Queue<sT>(this);
         t.l = l.Add(s.l);
         t.l.First();
         return t;
